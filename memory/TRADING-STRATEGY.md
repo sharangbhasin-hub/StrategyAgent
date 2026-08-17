@@ -4,10 +4,12 @@
 Beat the S&P 500 over the challenge window. Stocks only — no options, ever.
 
 ## Capital & Constraints
-- Starting capital: ~$10,000
+- Starting capital: ~$100,000
 - Platform: Alpaca (paper trading to start)
 - Instruments: Stocks ONLY
-- PDT limit: 3 day trades per 5 rolling days (account < $25k)
+- PDT limit: 3 day trades per 5 rolling days (applies to accounts < $25k — not
+  binding at this account size, but the max-3-new-trades/week rule below is a
+  hard discipline rule regardless, so keep enforcing it)
 
 ## Core Rules
 1. NO OPTIONS — ever
