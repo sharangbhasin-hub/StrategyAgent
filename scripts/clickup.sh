@@ -28,7 +28,15 @@ if [[ -z "${CLICKUP_API_KEY:-}" || -z "${CLICKUP_WORKSPACE_ID:-}" || -z "${CLICK
   echo "$msg"
   exit 0
 fi
-payload="$(python -c "
+PY=""
+for candidate in python3 python py; do
+  if command -v "$candidate" >/dev/null 2>&1 && "$candidate" -c "" >/dev/null 2>&1; then
+    PY="$candidate"
+    break
+  fi
+done
+: "${PY:?No working Python interpreter found (tried python3, python, py)}"
+payload="$("$PY" -c "
 import json, sys
 print(json.dumps({'type': 'message', 'content': sys.argv[1], 'content_format': 'text/md'}))
 " "$msg")"

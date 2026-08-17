@@ -20,8 +20,16 @@ if [[ -z "${PERPLEXITY_API_KEY:-}" ]]; then
   echo "WARNING: PERPLEXITY_API_KEY not set. Fall back to WebSearch." >&2
   exit 3
 fi
+PY=""
+for candidate in python3 python py; do
+  if command -v "$candidate" >/dev/null 2>&1 && "$candidate" -c "" >/dev/null 2>&1; then
+    PY="$candidate"
+    break
+  fi
+done
+: "${PY:?No working Python interpreter found (tried python3, python, py)}"
 MODEL="${PERPLEXITY_MODEL:-sonar}"
-payload="$(python -c "
+payload="$("$PY" -c "
 import json, sys
 print(json.dumps({
     'model': sys.argv[1],
