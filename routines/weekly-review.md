@@ -9,12 +9,14 @@ IMPORTANT — ENVIRONMENT VARIABLES:
   ALPACA_SECRET_KEY, ALPACA_ENDPOINT, ALPACA_DATA_ENDPOINT,
   PERPLEXITY_API_KEY, PERPLEXITY_MODEL, CLICKUP_API_KEY,
   CLICKUP_WORKSPACE_ID, CLICKUP_CHANNEL_ID.
+- PERPLEXITY_API_KEY is intentionally unset in this deployment; that's
+  expected, not an error.
 - There is NO .env file in this repo and you MUST NOT create, write, or
   source one. The wrapper scripts read directly from the process env.
 - If a wrapper prints "KEY not set in environment" -> STOP, send one
   ClickUp alert naming the missing var, and exit.
 - Verify env vars BEFORE any wrapper call:
-  for v in ALPACA_API_KEY ALPACA_SECRET_KEY PERPLEXITY_API_KEY \
+  for v in ALPACA_API_KEY ALPACA_SECRET_KEY \
            CLICKUP_API_KEY CLICKUP_WORKSPACE_ID CLICKUP_CHANNEL_ID; do
     [[ -n "${!v:-}" ]] && echo "$v: set" || echo "$v: MISSING"
   done
@@ -37,8 +39,10 @@ STEP 3 — Compute the week's metrics:
 - Starting portfolio (Monday AM equity)
 - Ending portfolio (today's equity)
 - Week return ($ and %)
-- S&P 500 week return:
-  bash scripts/perplexity.sh "S&P 500 weekly performance week ending $DATE"
+- S&P 500 week return: bash scripts/perplexity.sh "S&P 500 weekly
+  performance week ending $DATE" — since PERPLEXITY_API_KEY is unset this
+  will exit 3; fall back to the native WebSearch tool for the same query
+  instead.
 - Trades taken (W/L/open)
 - Win rate (closed trades only)
 - Best trade, worst trade
@@ -71,5 +75,7 @@ STEP 7 — COMMIT AND PUSH (mandatory):
   git add memory/WEEKLY-REVIEW.md memory/TRADING-STRATEGY.md
   git commit -m "weekly review $DATE"
   git push origin main
-If TRADING-STRATEGY.md didn't change, add just WEEKLY-REVIEW.md.
-On push failure: rebase and retry.
+If TRADING-STRATEGY.md didn't change, add just WEEKLY-REVIEW.md. On push
+failure: git pull --rebase origin main, then push again. Never force-push.
+If push still fails after one rebase retry, push to a new branch named
+claude/weekly-review-$DATE and say so in your summary.

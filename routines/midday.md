@@ -9,12 +9,14 @@ IMPORTANT — ENVIRONMENT VARIABLES:
   ALPACA_SECRET_KEY, ALPACA_ENDPOINT, ALPACA_DATA_ENDPOINT,
   PERPLEXITY_API_KEY, PERPLEXITY_MODEL, CLICKUP_API_KEY,
   CLICKUP_WORKSPACE_ID, CLICKUP_CHANNEL_ID.
+- PERPLEXITY_API_KEY is intentionally unset in this deployment; that's
+  expected, not an error.
 - There is NO .env file in this repo and you MUST NOT create, write, or
   source one. The wrapper scripts read directly from the process env.
 - If a wrapper prints "KEY not set in environment" -> STOP, send one
   ClickUp alert naming the missing var, and exit.
 - Verify env vars BEFORE any wrapper call:
-  for v in ALPACA_API_KEY ALPACA_SECRET_KEY PERPLEXITY_API_KEY \
+  for v in ALPACA_API_KEY ALPACA_SECRET_KEY \
            CLICKUP_API_KEY CLICKUP_WORKSPACE_ID CLICKUP_CHANNEL_ID; do
     [[ -n "${!v:-}" ]] && echo "$v: set" || echo "$v: MISSING"
   done
@@ -47,8 +49,10 @@ Never tighten within 3% of current price. Never move a stop down.
 STEP 5 — Thesis check. If a thesis broke intraday, cut the position even
 if not at -7% yet. Document reasoning in TRADE-LOG.
 
-STEP 6 — Optional intraday research via Perplexity if something is moving
-sharply with no obvious cause. Append afternoon addendum to RESEARCH-LOG.
+STEP 6 — Optional intraday research if something is moving sharply with no
+obvious cause. PERPLEXITY_API_KEY is intentionally unset in this deployment
+-- use the native WebSearch tool directly for this (skip scripts/perplexity.sh).
+Append afternoon addendum to RESEARCH-LOG.
 
 STEP 7 — Notification: only if action was taken.
   bash scripts/clickup.sh "<action summary>"
@@ -57,4 +61,7 @@ STEP 8 — COMMIT AND PUSH (if any memory files changed):
   git add memory/TRADE-LOG.md memory/RESEARCH-LOG.md
   git commit -m "midday scan $DATE"
   git push origin main
-Skip commit if no-op. On push failure: rebase and retry.
+Skip commit if no-op. On push failure: git pull --rebase origin main,
+then push again. Never force-push. If push still fails after one rebase
+retry, push to a new branch named claude/midday-$DATE and say so in your
+summary.

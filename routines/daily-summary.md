@@ -9,12 +9,14 @@ IMPORTANT — ENVIRONMENT VARIABLES:
   ALPACA_SECRET_KEY, ALPACA_ENDPOINT, ALPACA_DATA_ENDPOINT,
   PERPLEXITY_API_KEY, PERPLEXITY_MODEL, CLICKUP_API_KEY,
   CLICKUP_WORKSPACE_ID, CLICKUP_CHANNEL_ID.
+- PERPLEXITY_API_KEY is intentionally unset in this deployment; that's
+  expected, not an error (this workflow doesn't need it).
 - There is NO .env file in this repo and you MUST NOT create, write, or
   source one. The wrapper scripts read directly from the process env.
 - If a wrapper prints "KEY not set in environment" -> STOP, send one
   ClickUp alert naming the missing var, and exit.
 - Verify env vars BEFORE any wrapper call:
-  for v in ALPACA_API_KEY ALPACA_SECRET_KEY PERPLEXITY_API_KEY \
+  for v in ALPACA_API_KEY ALPACA_SECRET_KEY \
            CLICKUP_API_KEY CLICKUP_WORKSPACE_ID CLICKUP_CHANNEL_ID; do
     [[ -n "${!v:-}" ]] && echo "$v: set" || echo "$v: MISSING"
   done
@@ -59,4 +61,6 @@ STEP 6 — COMMIT AND PUSH (mandatory — tomorrow's Day P&L depends on this):
   git add memory/TRADE-LOG.md
   git commit -m "EOD snapshot $DATE"
   git push origin main
-On push failure: rebase and retry.
+On push failure: git pull --rebase origin main, then push again. Never
+force-push. If push still fails after one rebase retry, push to a new
+branch named claude/daily-summary-$DATE and say so in your summary.

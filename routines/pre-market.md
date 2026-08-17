@@ -44,8 +44,9 @@ bash scripts/perplexity.sh "<query>" for each:
 - "Economic calendar today CPI PPI FOMC jobs data"
 - "S&P 500 sector momentum YTD"
 - News on any currently-held ticker
-If Perplexity exits 3, fall back to native WebSearch and note the
-fallback in the log entry.
+If Perplexity exits 3 (PERPLEXITY_API_KEY is intentionally unset in this
+deployment), fall back to the native WebSearch tool for each query and
+note the fallback in the log entry.
 
 STEP 4 — Write a dated entry to memory/RESEARCH-LOG.md:
 - Account snapshot (equity, cash, buying power, daytrade count)
@@ -62,4 +63,7 @@ STEP 6 — COMMIT AND PUSH (mandatory):
   git commit -m "pre-market research $DATE"
   git push origin main
 On push failure: git pull --rebase origin main, then push again.
-Never force-push.
+Never force-push. If push still fails after one rebase retry (e.g.
+rejected due to branch protection or authorship rules), do NOT
+force-push — instead push to a new branch named claude/pre-market-$DATE
+and clearly say so in your final summary, so the human can review and merge.

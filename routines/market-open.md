@@ -9,12 +9,14 @@ IMPORTANT — ENVIRONMENT VARIABLES:
   ALPACA_SECRET_KEY, ALPACA_ENDPOINT, ALPACA_DATA_ENDPOINT,
   PERPLEXITY_API_KEY, PERPLEXITY_MODEL, CLICKUP_API_KEY,
   CLICKUP_WORKSPACE_ID, CLICKUP_CHANNEL_ID.
+- PERPLEXITY_API_KEY is intentionally unset in this deployment; that's
+  expected, not an error.
 - There is NO .env file in this repo and you MUST NOT create, write, or
   source one. The wrapper scripts read directly from the process env.
 - If a wrapper prints "KEY not set in environment" -> STOP, send one
   ClickUp alert naming the missing var, and exit.
 - Verify env vars BEFORE any wrapper call:
-  for v in ALPACA_API_KEY ALPACA_SECRET_KEY PERPLEXITY_API_KEY \
+  for v in ALPACA_API_KEY ALPACA_SECRET_KEY \
            CLICKUP_API_KEY CLICKUP_WORKSPACE_ID CLICKUP_CHANNEL_ID; do
     [[ -n "${!v:-}" ]] && echo "$v: set" || echo "$v: MISSING"
   done
@@ -26,7 +28,7 @@ IMPORTANT — PERSISTENCE:
 STEP 1 — Read memory for today's plan:
 - memory/TRADING-STRATEGY.md
 - TODAY's entry in memory/RESEARCH-LOG.md (if missing, run pre-market
-  STEPS 1-3 inline)
+  STEPS 1-3 inline, using native WebSearch since PERPLEXITY_API_KEY is unset)
 - tail of memory/TRADE-LOG.md (for weekly trade count)
 
 STEP 2 — Re-validate with live data:
@@ -40,7 +42,8 @@ and log the reason:
 - Trades this week <= 3
 - Position cost <= 20% of equity
 - Catalyst documented in today's RESEARCH-LOG
-- daytrade_count leaves room (PDT: 3/5 rolling business days)
+- daytrade_count leaves room (PDT: 3/5 rolling business days — not binding
+  at this account's equity level, but still respect the check)
 
 STEP 4 — Execute the buys (market orders, day TIF):
   bash scripts/alpaca.sh order '{"symbol":"SYM","qty":"N","side":"buy","type":"market","time_in_force":"day"}'
@@ -62,4 +65,7 @@ STEP 8 — COMMIT AND PUSH (mandatory if any trades executed):
   git add memory/TRADE-LOG.md
   git commit -m "market-open trades $DATE"
   git push origin main
-Skip commit if no trades fired. On push failure: rebase and retry.
+Skip commit if no trades fired. On push failure: git pull --rebase origin
+main, then push again. Never force-push. If push still fails after one
+rebase retry, push to a new branch named claude/market-open-$DATE and say
+so in your summary.
