@@ -18,3 +18,10 @@ No positions yet. Bot launches tomorrow.
 |---|---|---|---|---|---|---|
 | — | — | — | — | — | — | — |
 **Notes:** Day 2 live. No trades executed — zero positions, zero open orders, account flat at $100,000. Patience > activity.
+
+### Aug 19 — EOD Snapshot (Day 3, Wednesday)
+**Portfolio:** $100,000.00 | **Cash:** $100,000.00 (100%) | **Day P&L:** $0 (0.0%) | **Phase P&L:** $0 (0.0%)
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|
+| — | — | — | — | — | — | — |
+**Notes:** Day 3 live. No trades executed — zero positions, zero open orders, account flat at $100,000. Zero trades used of weekly 3-trade cap. Patience > activity.
