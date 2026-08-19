@@ -189,3 +189,72 @@ day to chase XLE into an oil spike or open a fresh position without more
 confirmation at the open. No entry today clears full checklist rigor
 (confirmed catalyst + sized stop + 2:1 min R:R) given the volatility
 backdrop. Defer to market-open workflow. Patience > activity.
+
+## 2026-08-19 — Pre-market Research
+Note: PERPLEXITY_API_KEY unset (exit 3) — used native WebSearch fallback for all queries below.
+
+### Account
+- Equity: $100,000
+- Cash: $100,000
+- Buying power: $400,000 (margin — sizing still governed by equity, not BP)
+- Positions: none | Open orders: none
+- Daytrade count: 0
+
+### Market Context
+- WTI: ~$84.9-85/bbl | Brent: ~$91.5/bbl — both elevated, still driven by
+  Iran/Hormuz standoff; Trump firmly ruled out talks with Iran.
+- S&P 500 futures: mixed/conflicting reads, net leaning down (~-0.18%),
+  Nasdaq 100 futures -0.37%, Dow -0.11%, Russell -0.19%. Overnight driver:
+  brutal Asia selloff (MSCI APAC -2%, South Korea -5.5%, Samsung/SK Hynix
+  both -7%+) as the semiconductor trade unwinds hard.
+- VIX: ~15.8-15.9, up ~4.3% on the day, off Monday's 2026 low (~14.2) —
+  vol continuing to wake up, second straight up day for VIX.
+- Catalysts: (1) Semiconductor selloff spreading from Asia — largest
+  single-day chip-stock damage of the year, direct read-through risk to
+  US semis (SMH) at the open; (2) 10Y Treasury yield ~4.73%, 30Y ~5.32%
+  (highest since 2007) — rate pressure weighing on risk assets broadly;
+  (3) Iran/Hormuz tension still live and two-sided; (4) heavy retail
+  earnings dump today.
+- Earnings before open: Analog Devices (ADI), TJX, Lowe's (LOW), Target
+  (TGT), Estee Lauder (EL) — 38 names reporting total today, retail-heavy.
+- Econ calendar: FOMC July minutes released today (afternoon) — main
+  scheduled event; no CPI/PPI/NFP pinned to today specifically.
+- Sector momentum YTD: Energy still top (~+22-32% depending on source),
+  Healthcare a surprising #2 as flight-to-safety bid persists into rising
+  VIX. Tech/semis momentum is now actively breaking down overnight, not
+  just "cooling" — SMH-linked names at real risk of a gap-down open.
+- Held tickers: none — no positions to check news on.
+
+### Trade Ideas (watchlist only)
+1. XLV (Healthcare) — catalyst: continued flight-to-safety bid, YTD #2
+   sector, benefiting from both risk-off tape and rising-yield rotation
+   out of long-duration growth. Needs a specific name/level check at open
+   before actionable; sector-only flag still pending follow-up.
+2. XLE (Energy) — catalyst: Iran/Hormuz-driven oil strength persists.
+   Still the top YTD sector, but timing risk remains high — two-sided
+   headline (any de-escalation snaps oil back). No fresh entry into a
+   possible spike top.
+3. No semis/tech idea — actively avoid. Overnight Asia chip selloff
+   (Samsung/SK Hynix -7%+) is a real negative catalyst, not just froth;
+   SMH and mega-cap AI names are the highest-risk long today, not a dip
+   to buy without confirmation the damage doesn't spread to the US open.
+
+### Risk Factors
+- Semiconductor unwind spreading from Asia is the dominant new risk today
+  — could cascade into US mega-cap tech/AI names at the open; day to
+  watch, not trade, in that space.
+- 10Y yield at 4.73%, 30Y at 5.32% (highest since 2007) — a real
+  macro headwind for equity valuations broadly, not just a headline blip.
+- Iran/Hormuz standoff still live and two-sided (oil spikes on
+  escalation, snaps back on any de-escalation signal).
+- Heavy retail earnings today (TJX/LOW/TGT/EL) — any miss/guide-down
+  compounds pressure on an already-lagging Consumer Discretionary sector.
+- FOMC minutes this afternoon — positioning risk into the release.
+
+### Decision
+HOLD — Day 3, still zero positions. New negative catalyst overnight
+(Asia semis selloff, multi-decade-high long yields) argues for more
+caution, not less. No idea today clears full entry-checklist rigor
+(confirmed catalyst + sized stop + 2:1 min R:R). Defer to market-open
+workflow to see how US semis/tech open and whether yields keep climbing.
+Patience > activity.
