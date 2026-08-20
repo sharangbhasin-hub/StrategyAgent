@@ -257,4 +257,81 @@ HOLD — Day 3, still zero positions. New negative catalyst overnight
 caution, not less. No idea today clears full entry-checklist rigor
 (confirmed catalyst + sized stop + 2:1 min R:R). Defer to market-open
 workflow to see how US semis/tech open and whether yields keep climbing.
+
+## 2026-08-20 — Pre-market Research
+Note: PERPLEXITY_API_KEY unset (exit 3) — used native WebSearch fallback for all queries below.
+
+### Account
+- Equity: $100,000
+- Cash: $100,000
+- Buying power: $400,000 (margin — sizing still governed by equity, not BP)
+- Positions: none | Open orders: none
+- Daytrade count: 0
+
+### Market Context
+- WTI: ~$84.25-85.34/bbl | Brent: ~$93.01/bbl (+1.52%) — still Iran/Hormuz
+  driven; US reportedly intensifying economic pressure on Iran.
+- S&P 500 futures: +0.16%, Nasdaq 100 +0.42%, Dow +0.06%, Russell 2000
+  +0.24% — modest green tape, driven by a Treasury buyback announcement
+  (doubling debt repurchases to $4B+) pulling yields lower.
+- VIX: ~15.8, up off Friday's 2026 low of 14.2 but not elevated — vol
+  still calm despite the geopolitical/inflation crosscurrents.
+- Catalysts: (1) Treasury buyback doubling — yields down, broad tailwind;
+  (2) Moderna phase 3 win on personalized melanoma cancer vaccine — best
+  single-day stock move in company history, biotech/healthcare bid;
+  (3) hot PPI print (headline +0.7% vs +0.4% consensus, YoY +1.6%) —
+  inflation running hotter than expected days before next week's FOMC;
+  (4) retail sales +0.6% vs +0.4% expected — resilient consumer;
+  (5) Bitcoin up on White House crypto-bill push.
+- Earnings before open: WMT, BABA, DE, AAP, NTES, FUTU, ATHM, DQ, SCSC,
+  LYTS. After close: ROST, FLO, OSIS.
+- Econ calendar: PPI + Retail Sales released this morning (both hotter
+  than expected). No CPI/jobs data today. FOMC meeting next week.
+- Sector momentum: Energy leading WTD (+6%), Healthcare/Financials also
+  up >1% WTD. YTD leaders: Materials (+22%), Consumer Staples,
+  Industrials, Energy. Tech/Communications/Discretionary/Financials in
+  lagging quadrant; Real Estate/Utilities improving.
+- Held tickers: none — no positions to check news on.
+
+### Trade Ideas (watchlist only)
+1. XLE (Energy) — catalyst: oil at multi-week highs on Iran/Hormuz
+   escalation, sector both YTD (#4) and WTD (#1) momentum leader. Ref
+   price ~$63.60. Illustrative entry ~$63.50-64.00, stop ~7% below
+   (~$59.20, respects 3%+ distance rule), target ~$68.50-69.00 (~2:1
+   R:R). Risk: same two-sided geopolitical headline flagged prior two
+   days — any de-escalation snaps oil back fast. Still no confirmed
+   breakout level at today's open.
+2. XLV (Healthcare) — catalyst: Moderna trial win. Ref price already
+   gapped from $169.73 to $175.25 (+3.25%) yesterday on the news — sector
+   is extended, not a fresh entry. Watching for a pullback/consolidation
+   before treating as actionable; chasing an already-extended gap fails
+   the entry-checklist R:R test.
+3. XLB (Materials) — catalyst: YTD momentum leader (+22%), classic
+   inflation-hedge sector and today's hot PPI print supports the rotation
+   thesis. Ref price ~$52.50-52.90. Illustrative entry ~$52.50-53.00,
+   stop ~7% below (~$49.00), target ~$58.00 (~2:1 R:R). Needs open
+   confirmation — no breakout trigger yet, still watchlist only.
+
+### Risk Factors
+- Iran/Hormuz standoff still live and two-sided — oil (and XLE) can
+  reverse hard on any de-escalation headline, same risk flagged 2 days
+  running.
+- Inflation surprising hot (PPI, retail sales) days before FOMC — could
+  pressure the "yields down on Treasury buyback" tailwind if the market
+  reprices rate-cut odds down.
+- XLV move is already largely priced in on a single-stock (Moderna)
+  catalyst — sector-wide follow-through at the open is unconfirmed.
+- Heavy earnings day (WMT, BABA, DE, ROST after close) — index-level
+  volatility risk around large-cap prints.
+- VIX still low (~15.8) despite live geopolitical/inflation risk —
+  complacency could unwind quickly on a surprise.
+
+### Decision
+HOLD — Day 4, still zero positions, zero trades used of weekly cap. Three
+watchlist ideas (XLE, XLV, XLB) all lack a confirmed open-level trigger:
+XLE carries repeat two-sided geopolitical risk, XLV is already extended
+on a single-stock catalyst, XLB has no breakout confirmation yet. None
+clears full entry-checklist rigor pre-open. Defer to market-open workflow
+to check actual opening prices/volume before any entry. Patience >
+activity.
 Patience > activity.
