@@ -335,3 +335,74 @@ clears full entry-checklist rigor pre-open. Defer to market-open workflow
 to check actual opening prices/volume before any entry. Patience >
 activity.
 Patience > activity.
+
+## 2026-08-21 — Pre-market Research
+Note: PERPLEXITY_API_KEY unset (exit 3) — used native WebSearch fallback for all queries below.
+
+### Account
+- Equity: $100,000
+- Cash: $100,000
+- Buying power: $400,000 (margin — sizing still governed by equity, not BP)
+- Positions: none | Open orders: none
+- Daytrade count: 0
+
+### Market Context
+- WTI: ~$86.16-86.18/bbl | Brent: ~$93.01-93.24/bbl — modest pullback off
+  Thursday's Iran/Hormuz-driven spike, essentially flat overnight.
+- S&P 500 futures: +0.08%, Nasdaq 100 +0.20%, Dow +0.05%, Russell 2000
+  +0.33% — light green tape, 65% odds of a higher open per prediction
+  markets. Bessent touting "toughest sanctions" for Iran + a fiscal/debt
+  buyback plan; 30Y yield up to 5.25% on the fiscal chatter.
+- VIX: ~15.82-15.87 — near 2026 lows, calm despite live geopolitical risk.
+- Notable cross-current: gold +0.5% to ~$4,540 (+3.6% WTD) — safe-haven
+  bid running alongside the equity futures bounce, worth watching as a
+  risk-off tell if it keeps building.
+- Earnings before open: none of significance today (light Friday).
+  Next earnings wave starts Mon 8/25 (BMO, DKS, INTU, ZM) and Tue 8/26
+  (NVDA, CRM, WSM, CRWD, SNPS, A, HPQ, OKTA).
+- Econ calendar: no CPI/PPI/jobs data today — light calendar. FOMC next
+  week; yesterday's hot PPI/retail-sales prints still the overhang into it.
+- Sector momentum: Energy (+22% YTD), Consumer Staples (+16%), Materials
+  (+15.7%), Industrials (+11.9%) in the leading quadrant. Tech (-3.8%),
+  Consumer Discretionary (-4.6%), Financials (-5.7%), Communications
+  lagging. Deere raised FY net-income guidance — fresh positive catalyst
+  for Industrials specifically.
+- Held tickers: none — no positions to check news on.
+
+### Trade Ideas (watchlist only)
+1. XLI (Industrials) — catalyst: Deere guidance raise + sector already
+   in the leading momentum quadrant (+11.9% YTD). Needs today's open
+   confirmation of follow-through (volume, breakout level) before sizing
+   an entry; illustrative stop ~7-8% below entry, target sized for 2:1+.
+   New idea vs. prior days — not yet confirmed.
+2. XLB (Materials) — same repeat catalyst as prior 2 sessions (YTD
+   momentum leader, inflation-hedge rotation on hot PPI). Still no
+   observed breakout trigger at the open in three straight sessions —
+   third day flagging this one without a fill; treat as fading
+   conviction, not a stronger signal.
+3. XLE (Energy) — oil cooling off slightly overnight after the
+   Iran/Hormuz spike; sector momentum still #1 YTD but the two-sided
+   geopolitical risk (flagged 3 days running) is unchanged. Lower
+   conviction today given the pullback in oil itself.
+
+### Risk Factors
+- Gold's safe-haven rally (+3.6% WTD) running alongside a "risk-on"
+  futures bounce is a mixed signal — could presage a risk-off turn if
+  equities fail to hold the modest premarket gain.
+- 30Y yield at 5.25%/multi-decade highs on fiscal/buyback chatter — same
+  valuation headwind flagged the last two days, still unresolved.
+- Iran/Hormuz geopolitical risk remains two-sided and live for the third
+  straight session — XLE thesis unchanged and unconfirmed.
+- Light Friday calendar (no data, no major earnings) — lower conviction
+  for fresh catalysts; typical lighter Friday volume can produce false
+  breakout signals.
+- XLB has now been flagged 3 sessions running with no entry trigger —
+  worth deprioritizing vs. chasing it a 4th day.
+
+### Decision
+HOLD — Day 5, still zero positions, zero trades used of weekly cap.
+Light Friday calendar (no CPI/PPI/jobs, no major earnings) and no
+confirmed breakout on any watchlist name (XLI new but unconfirmed, XLB
+stale after 3 flags, XLE lower-conviction on cooling oil). Defer to
+market-open workflow to check actual opening prices/volume. Patience >
+activity.
